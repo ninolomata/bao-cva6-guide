@@ -1,0 +1,28 @@
+From 35ff509724918401cd2ec3f6fc9b3c9e1f607bb9 Mon Sep 17 00:00:00 2001
+From: ninolomata <bruno.vilaca.sa@gmail.com>
+Date: Wed, 5 Jan 2022 22:10:27 +0000
+Subject: [PATCH] fix linux config to work with bao
+
+---
+ configs/linux64_defconfig | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/configs/linux64_defconfig b/configs/linux64_defconfig
+index 105edc7..93d38fc 100644
+--- a/configs/linux64_defconfig
++++ b/configs/linux64_defconfig
+@@ -3,6 +3,11 @@ CONFIG_DEFAULT_HOSTNAME="ariane-fpga"
+ CONFIG_NAMESPACES=y
+ CONFIG_BLK_DEV_INITRD=y
+ CONFIG_INITRAMFS_SOURCE="${BR_BINARIES_DIR}/rootfs.cpio"
++CONFIG_INITRAMFS_FORCE=y
++CONFIG_INITRAMFS_ROOT_UID=0
++CONFIG_INITRAMFS_ROOT_GID=0
++CONFIG_RD_GZIP=y
++CONFIG_INITRAMFS_COMPRESSION=".gz"
+ CONFIG_EMBEDDED=y
+ CONFIG_SMP=y
+ CONFIG_HZ_100=y
+-- 
+2.25.1
+
