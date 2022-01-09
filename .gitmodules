@@ -1,0 +1,15 @@
+[submodule "opensbi"]
+	path = opensbi
+	url = https://github.com/riscv-software-src/opensbi.git
+[submodule "cva6-sdk"]
+	path = cva6-sdk
+	url = https://github.com/openhwgroup/cva6-sdk.git
+[submodule "bao-hypervisor"]
+	path = bao-hypervisor
+	url = https://github.com/ninolomata/bao-hypervisor.git
+[submodule "bao-baremetal-guest"]
+	path = bao-baremetal-guest
+	url = https://github.com/ninolomata/bao-baremetal-guest.git
+[submodule "cva6"]
+	path = cva6
+	url = https://github.com/minho-pulp/cva6.git
