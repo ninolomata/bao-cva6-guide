@@ -170,7 +170,7 @@ then write the image with
 
 ## Used tool versions
 
+- riscv64-unknown-elf-gcc (SiFive GCC 10.1.0-2020.08.2) 10.1.0
 - riscv64-unknown-linux-gnu-gcc version 11.1.0
-- riscv64-linux-gcc version 9.3.0 (Buildroot 2020.02-00011-g7ea8a52) (for linux)
 - Vivado 2018.2
 - dtc 1.5.0
