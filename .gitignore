@@ -1,0 +1,3 @@
+linux/lloader/*.elf
+linux/lloader/*.bin
+linux/*.dtb

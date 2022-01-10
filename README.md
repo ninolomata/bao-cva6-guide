@@ -9,8 +9,9 @@ This guide provides a fully step by step tutorial on how to run a one core CVA6 
   - [1.2) CVA6 SDK Linux](#12-cva6-sdk-linux)
   - [1.3) Bao](#13-bao)
   - [1.4) OpenSBI](#14-opensbi)
-  - [2) Generate Bitstream with CVA6](#2-generate-bitstream-with-cva6)
-    - [2.1) Booting on Genesys2](#21-booting-on-genesys2)
+- [2) Openpiton](#2-openpiton)
+  - [2.1) Generate Bitstream Openpiton](#21-generate-bitstream-openpiton)
+  - [2.2) Booting on Genesys2](#22-booting-on-genesys2)
   - [Used tool versions](#used-tool-versions)
 
 # 0) Prologue
@@ -21,9 +22,9 @@ First setup ARCH and your RISC-V toolchain prefix:
 `export CROSS_COMPILE=toolchain-prefix-`\
 `export RISCV=path/to/riscv-tools`
 
-For all software use *riscv64-unknown-elf-* gcc 10.1.0 2020.08.2, from https://static.dev.sifive.com/dev-tools/freedom-tools/v2020.08/riscv64-unknown-elf-gcc-10.1.0-2020.08.2-x86_64-linux-ubuntu14.tar.gz.
+For all software use *riscv64-unknown-elf-* gcc 10.1.0 2020.08.2, from [toolchain](https://static.dev.sifive.com/dev-tools/freedom-tools/v2020.08/riscv64-unknown-elf-gcc-10.1.0-2020.08.2-x86_64-linux-ubuntu14.tar.gz).
 
-Specifically for building opensbi, I had to use a different toolchain *riscv64-linux-* gcc version 9.3.0 2020.02-2, which I downloaded from https://toolchains.bootlin.com/downloads/releases/toolchains/riscv64/tarballs/riscv64--glibc--bleeding-edge-2020.02-2.tar.bz2.
+Specifically for building opensbi, I had to use a different toolchain riscv64-unknown-linux-gnu-, which I downloaded from [linux toolchain](https://github.com/riscv-collab/riscv-gnu-toolchain/releases/tag/2021.08.11).
 
 Next, install the [RISC-V Tools](https://github.com/riscv/riscv-tools) and make sure the `RISCV` environment variable points to where your RISC-V installation is located.
 
@@ -35,7 +36,7 @@ For every path starting with */path/to/* substitute it by the corresponding abso
 
 Finally, initialize the repo and all the submodules by running:
 
-`git submodule update --init --recursive`
+`git submodule update --init`
 
 # 1) Software
 
@@ -44,28 +45,28 @@ Finally, initialize the repo and all the submodules by running:
 To build the bare-metal guest for the cva6:
 
 `cd bao-baremetal-guest`\
-`make PLATFORM=cva6`
+`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=openpiton`
 
 ## 1.2) CVA6 SDK Linux
 
 To build linux using the **cva6 sdk** run:
 
 `cd cva6-sdk`\
-`git apply ../patches/0001-fix-linux-config-to-work-with-bao.patch`\
-`make images`
+`git submodule update --init --recursive`
+`make uImage`
 
 > **_:notebook: Note:_** The following steps shall be done using the *riscv64-unknown-elf-* toolchain.
 
 Next, build the cva6 device tree:
 
 `cd ../linux`\
-`dtc cva6-ariane-minimal-bao.dts > cva6-ariane-minimal-bao.dtb`\
-`dtc cva6-ariane-minimal.dts > cva6-ariane-minimal.dtb`
+`dtc cva6-openpiton-minimal.dts > cva6-openpiton-minimal.dtb`\
+`dtc cva6-openpiton-full.dts > cva6-openpiton-full.dtb`
 
 And build the final image by concatening the minimal bootloader, linux and device tree binaries:
 
 `cd lloader`\
-`make ARCH=rv64 IMAGE=../../cva6-sdk/buildroot/output/build/linux-v5.10.7/arch/riscv/boot/Image DTB=../cva6-ariane-minimal-bao.dtb TARGET=linux-rv64-cva6-zcu`
+`make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../cva6-openpiton-minimal.dtb TARGET=linux-rv64-openpiton`
 
 ## 1.3) Bao
 
@@ -82,23 +83,23 @@ Copy the provided configs to bao's directory:
 In the configs you want to use, in the *configs/xxxconfig/config.c* files, setup the absolute path for the
 vm images. For example:
 
-For the **cva6-baremetal** config:
+For the **openpiton-baremetal** config:
 
-**VM_IMAGE(baremetal_image, path/to/bao-baremetal-guest/build/cva6/baremetal.bin);**
-
-or
-
-For the **cva6-linux** config:
-
-**VM_IMAGE(linux_image, /path/to/linux/lloader/linux-rv64-cva6-zcu.bin);**
-
-Next there is a example on how to compile bao with linux and baremetal config for cva6:
-
-`make PLATFORM=cva6 CONFIG=cva6-linux CONFIG_BUILTIN=y`
+**VM_IMAGE(baremetal_image, path/to/bao-baremetal-guest/build/openpiton/baremetal.bin);**
 
 or
 
-`make PLATFORM=cva6 CONFIG=cva6-baremetal CONFIG_BUILTIN=y`
+For the **openpiton-linux** config:
+
+**VM_IMAGE(linux_image, /path/to/linux/lloader/linux-rv64-openpiton-zcu.bin);**
+
+Next there is a example on how to compile bao with linux and baremetal config for openpiton:
+
+`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=openpiton CONFIG=openpiton-linux CONFIG_BUILTIN=y`
+
+or
+
+`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=openpiton CONFIG=openpiton-baremetal CONFIG_BUILTIN=y`
 
 
 ## 1.4) OpenSBI
@@ -114,26 +115,44 @@ Examples:
 
 To build **opensbi**with **bao** and **baremetal application** for fpga run:
 
-`make PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/cva6/builtin-configs/cva6-baremetal/bao.bin FW_PAYLOAD_FDT_ADDR=0x88200000`
+`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/openpiton FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/openpiton/builtin-configs/openpiton-baremetal/bao.bin`
 
 To build **opensbi** with **bao** and **linux** for fpga run:
 
-`make PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/cva6/builtin-configs/cva6-linux/bao.bin FW_PAYLOAD_FDT_ADDR=0x88200000`
+`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/openpiton FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/openpiton/builtin-configs/openpiton-linux/bao.bin`
 
-To build **opensbi** with just **linux** for fpga run:
+To build **opensbi** with just **linux** with one core configuration run:
 
-`make PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../cva6-sdk/buildroot/output/build/linux-v5.10.7/arch/riscv/boot/Image FW_FDT_PATH=../linux/cva6-ariane-minimal.dtb FW_PAYLOAD_FDT_ADDR=0xb2200000`
+`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/openpiton FW_PAYLOAD=y FW_PAYLOAD_PATH=../cva6-sdk/install64/Image`
 
-## 2) Generate Bitstream with CVA6
+To build **opensbi** with just **linux** with dual core configuration run:
 
-> **_:notebook: Note:_** The following steps shall be executed with *RISCV* environment variable set to where your RISC-V installation is located.
+`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/openpiton FW_PAYLOAD=y FW_PAYLOAD_PATH=../cva6-sdk/install64/Image FW_FDT_PATH=../linux/cva6-openpiton-full.dtb`
 
-To generate the FPGA bitstream (and memory configuration) yourself for the Genesys II board run:
+> **_:notebook: Note:_** The command above builds a image for a dual core configuration, to run in a single core configuration some changes are required on the device tree.
+# 2) Openpiton
 
-`cd cva6`\
-`make fpga`
+First, setup openpiton as instructed in the submodule **openpiton/README**.
+Next, just checkout to the hyp cva6 repo by running the following commands:
 
-### 2.1) Booting on Genesys2
+`cd openpiton/piton/design/chip/tile/ariane`\
+`git remote add minho-pulp https://github.com/minho-pulp/cva6.git`\
+`git checkout minho-pulp/wip/hyp`\
+`git fetch minho-pulp wip/hyp`\
+`git checkout minho-pulp/wip/hyp`\
+`git submodule update --init --recursive`
+
+## 2.1) Generate Bitstream Openpiton
+
+The bitfile for a 1x1 tile cva6 configuration for the Genesys2 board can be built using the following command:
+
+`protosyn -b genesys2 -d system --core=ariane --uart-dmw ddr`
+
+For a 2x1 configuration run:
+
+`protosyn -b genesys2 -d system --core=ariane --uart-dmw ddr --x_tiles=2`
+
+## 2.2) Booting on Genesys2
 
 To prepare the SD card with a Opensbi image you need to format it with
 [`sgdisk`](https://wiki.archlinux.org/index.php/GPT_fdisk)
@@ -147,7 +166,7 @@ then write the image with
     partition table and two partitions:
     1st partition 32MB (ONIE boot),
     2nd partition rest (Linux root).
-3. `$ sudo dd if=/path/to/opensbi/build/platform/fpga/ariane/fw_payload.bin of=/dev/sda1 oflag=sync bs=1M`
+3. `$ sudo dd if=/path/to/opensbi/build/platform/fpga/openpiton/fw_payload.bin of=/dev/sda1 oflag=sync bs=1M`
     Write the Opensbi payload `fw_payload.bin` file to the first partition.
     E.g. where your disk label is `/dev/sda` use `/dev/sda1` (append a `1`).
 4. Insert the SD card into the FPGA development board.
@@ -170,6 +189,6 @@ then write the image with
 ## Used tool versions
 
 - riscv64-unknown-elf-gcc version 10.1.0 (SiFive GCC 8.3.0-2020.08.2)
-- riscv64-linux-gcc version 9.3.0 (Buildroot 2020.02-00011-g7ea8a52) (for linux)
+- riscv64-unknown-linux-gnu-gcc version 11.1.0
 - Vivado 2018.2
 - dtc 1.5.0
