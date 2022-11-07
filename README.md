@@ -60,13 +60,21 @@ To build linux using the **cva6 sdk** run:
 Next, build the cva6 device tree:
 
 `cd ../linux`\
-`dtc cva6-openpiton-minimal.dts > cva6-openpiton-minimal.dtb`\
+`dtc cva6-openpiton-bao-minimal.dts > cva6-openpiton-bao-minimal.dtb`\
+`dtc cva6-openpiton-bao-full.dts > cva6-openpiton-bao-full.dtb`\
 `dtc cva6-openpiton-full.dts > cva6-openpiton-full.dtb`
 
 And build the final image by concatening the minimal bootloader, linux and device tree binaries:
 
-`cd lloader`\
-`make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../cva6-openpiton-minimal.dtb TARGET=linux-rv64-openpiton`
+`cd lloader`
+
+Run the following commands to build the system for single-core linux:
+
+`make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../cva6-openpiton-bao-minimal.dtb TARGET=linux-rv64-openpiton`
+
+Run the following commands to build the system for dual-core linux:
+
+`make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../cva6-openpiton-bao-full.dtb TARGET=linux-rv64-openpiton`
 
 ## 1.3) Bao
 
@@ -93,13 +101,21 @@ For the **openpiton-linux** config:
 
 **VM_IMAGE(linux_image, /path/to/linux/lloader/linux-rv64-openpiton-zcu.bin);**
 
-Next there is a example on how to compile bao with linux and baremetal config for openpiton:
+Next there is a example on how to compile bao with linux and/or baremetal config for openpiton:
 
 `make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=openpiton CONFIG=openpiton-linux CONFIG_BUILTIN=y`
 
 or
 
 `make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=openpiton CONFIG=openpiton-baremetal CONFIG_BUILTIN=y`
+
+For dual-core configuration running just Linux or Linux and a baremetal applications run the following commands:
+
+`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=openpiton-dual CONFIG=openpiton-linux-dual CONFIG_BUILTIN=y`
+
+or
+
+`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=openpiton-dual CONFIG=openpiton-linux-baremetal CONFIG_BUILTIN=y`
 
 
 ## 1.4) OpenSBI
