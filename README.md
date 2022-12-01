@@ -34,6 +34,10 @@ Start each step from the top-level directory.
 
 For every path starting with */path/to/* substitute it by the corresponding absolute path in your machine.
 
+Alternatively, you can use the provided script to build the toolchains:
+
+`source ./scripts/build-tools.sh`
+
 Finally, initialize the repo and all the submodules by running:
 
 `git submodule update --init`
