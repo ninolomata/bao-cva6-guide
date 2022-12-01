@@ -28,18 +28,8 @@ struct config config = {
                         .size = 0x10000000,
                     }
                 },
-
-                .dev_num = 1,
-                .devs =  (struct dev_region[]) {
-                    {
-                        .pa = 0xfff0c2c000,   
-                        .va = 0xfff0c2c000,  
-                        .size = 0x000d4000,  
-                        .interrupt_num = 1,
-                        .interrupts = (uint64_t[]) {1}
-                    },
-                },
-
+                .dev_num = 0,
+                .devs =  (struct dev_region[]) {},
                 .arch = {
                    .plic_base = 0xfff1100000,
                 }
@@ -52,7 +42,7 @@ struct config config = {
                 .size = VM_IMAGE_SIZE(baremetal_image)
             },
 
-            .entry = 0x90200000,
+            .entry = 0x80200000,
 
             .platform = {
                 .cpu_num = 1,
@@ -60,13 +50,20 @@ struct config config = {
                 .region_num = 1,
                 .regions =  (struct mem_region[]) {
                     {
-                        .base = 0x90200000,
+                        .base = 0x80200000,
                         .size = 0x10000000 - 0x200000 //128MB
                     }
                 },
 
-                .dev_num = 0,
+                .dev_num = 1,
                 .devs =  (struct dev_region[]) {
+                    {
+                        .pa = 0xfff0c2c000,   
+                        .va = 0xfff0c2c000,  
+                        .size = 0x000d4000,  
+                        .interrupt_num = 1,
+                        .interrupts = (uint64_t[]) {1}
+                    },
                 },
 
                 .arch = {
