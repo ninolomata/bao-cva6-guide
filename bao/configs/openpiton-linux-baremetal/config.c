@@ -61,8 +61,8 @@ struct config config = {
                         .pa = 0xfff0c2c000,   
                         .va = 0xfff0c2c000,  
                         .size = 0x000d4000,  
-                        .interrupt_num = 1,
-                        .interrupts = (uint64_t[]) {1}
+                        .interrupt_num = 0,
+                        .interrupts = (uint64_t[]) {}
                     },
                 },
 

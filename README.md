@@ -59,14 +59,15 @@ To build linux using the **cva6 sdk** run:
 `git submodule update --init --recursive`
 `make uImage`
 
-> **_:notebook: Note:_** The following steps shall be done using the *riscv64-unknown-elf-* toolchain.
+> **_:notebook: Note:_** The following steps shall be done using the *riscv64-unknown-elf-* toolchain. This step can be skipped, we already have a pre-built image inside **pre-built/linux_image/Image** folder.
 
 Next, build the cva6 device tree:
 
 `cd ../linux`\
 `dtc cva6-openpiton-bao-minimal.dts > cva6-openpiton-bao-minimal.dtb`\
 `dtc cva6-openpiton-bao-full.dts > cva6-openpiton-bao-full.dtb`\
-`dtc cva6-openpiton-full.dts > cva6-openpiton-full.dtb`
+`dtc cva6-openpiton-full.dts > cva6-openpiton-full.dtb`\
+`dtc cva6-openpiton-bao-minimal-dual-guest.dts > cva6-openpiton-bao-minimal-dual-guest.dtb`
 
 And build the final image by concatening the minimal bootloader, linux and device tree binaries:
 
@@ -75,6 +76,10 @@ And build the final image by concatening the minimal bootloader, linux and devic
 Run the following commands to build the system for single-core linux:
 
 `make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../cva6-openpiton-bao-minimal.dtb TARGET=linux-rv64-openpiton`
+
+Run the following commands to build the system for single-core dual-guest linux:
+
+`make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../cva6-openpiton-bao-minimal-dual-guest.dtb TARGET=linux-rv64-openpiton`
 
 Run the following commands to build the system for dual-core linux:
 
@@ -171,6 +176,9 @@ The bitfile for a 1x1 tile cva6 configuration for the Genesys2 board can be buil
 For a 2x1 configuration run:
 
 `protosyn -b genesys2 -d system --core=ariane --uart-dmw ddr --x_tiles=2`
+
+This step can be skipped, as we provide a pre-built bitstream of a dual-core system inside **pre-built/bitstream/genesys2_system.bit**.
+
 
 ## 2.2) Booting on Genesys2
 
