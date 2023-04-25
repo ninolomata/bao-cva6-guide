@@ -11,13 +11,13 @@ struct config config = {
     .vmlist = {
         { 
             .image = {
-                .base_addr = 0x90000000,
+                .base_addr =0x80200000,
                 .load_addr = VM_IMAGE_OFFSET(linux_image),
                 .size = VM_IMAGE_SIZE(linux_image),
                 .inplace = true
             },
 
-            .entry = 0x90000000,
+            .entry = 0x80200000,
 
             .platform = {
                 .cpu_num = 1,
@@ -25,10 +25,8 @@ struct config config = {
                 .region_num = 1,
                 .regions =  (struct vm_mem_region[]) {
                     {
-                        .base = 0x90000000,
-                        .size = 0x10200000,
-                        .place_phys = true,
-                        .phys = 0x90000000
+                        .base = 0x80200000,
+                        .size = 0x20000000,
                     }
                 },
 
