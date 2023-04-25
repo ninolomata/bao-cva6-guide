@@ -75,9 +75,10 @@ To build **bao** for cva6:
 
 `cd bao-hypervisor`
 
-Copy the provided configs to bao's directory:
+Copy the provided configs and cva6 platform to bao's directory:
 
 `cp -r ../bao/configs/* ./configs`
+`cp -r ../bao/platform/* ./src/platform`
 
 In the configs you want to use, in the *configs/xxxconfig/config.c* files, setup the absolute path for the
 vm images. For example:
@@ -128,11 +129,12 @@ To build **opensbi** with just **linux** for fpga run:
 
 > **_:notebook: Note:_** The following steps shall be executed with *RISCV* environment variable set to where your RISC-V installation is located.
 
+Hypervisor extension should be enabled by setting the parameter **CVA6ConfigHExtEn = 1** in the **cva6/core/include/cv64a6_imafdc_sv39_config_pkg.sv** file.
 To generate the FPGA bitstream (and memory configuration) yourself for the Genesys II board run:
 
 `cd cva6`\
 `git submodule update --init --recursive`\
-`make fpga`
+`make fpga -j${nproc}`
 
 ### 2.1) Booting on Genesys2
 
