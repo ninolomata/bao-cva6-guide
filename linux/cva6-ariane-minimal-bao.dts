@@ -29,9 +29,9 @@
       };
     };
   };
-  memory@90000000 {
+  memory@80200000 {
     device_type = "memory";
-    reg = <0x0 0x90000000 0x0 0x10200000>;
+    reg = <0x0 0x80200000 0x0 0x20000000>;
   };
   L26: soc {
     #address-cells = <2>;
