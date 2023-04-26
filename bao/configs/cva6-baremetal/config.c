@@ -24,7 +24,7 @@ struct config config = {
                 .regions =  (struct vm_mem_region[]) {
                     {
                         .base = 0x80200000,
-                        .size = 0x20000000,
+                        .size = 0x20E00000,
                     }
                 },
 
