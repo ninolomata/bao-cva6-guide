@@ -44,6 +44,7 @@ Finally, initialize the repo and all the submodules by running:
 To build the bare-metal guest for the cva6:
 
 `cd bao-baremetal-guest`\
+`cp -r ../guest/platform/* ./src/platform`\
 `make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=cva6`
 
 ## 1.2) CVA6 SDK Linux
