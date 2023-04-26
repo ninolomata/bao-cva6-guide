@@ -31,7 +31,7 @@
   };
   memory@80200000 {
     device_type = "memory";
-    reg = <0x0 0x80200000 0x0 0x20000000>;
+    reg = <0x0 0x80200000 0x0 0x20E00000>;
   };
   L26: soc {
     #address-cells = <2>;
