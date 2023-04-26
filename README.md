@@ -115,11 +115,11 @@ Examples:
 
 To build **opensbi**with **bao** and **baremetal application** for fpga run:
 
-`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/cva6/builtin-configs/cva6-baremetal/bao.bin`
+`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/cva6/cva6-baremetal/bao.bin`
 
 To build **opensbi** with **bao** and **linux** for fpga run:
 
-`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/cva6/builtin-configs/cva6-linux/bao.bin`
+`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/cva6/cva6-linux/bao.bin`
 
 To build **opensbi** with just **linux** for fpga run:
 
