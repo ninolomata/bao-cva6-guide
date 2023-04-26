@@ -53,7 +53,7 @@ To build linux using the **cva6 sdk** run:
 
 `cd cva6-sdk`\
 `git submodule update --init --recursive`\
-`make uImage`
+`make images`
 
 > **_:notebook: Note:_** The following steps shall be done using the *riscv64-unknown-elf-* toolchain.
 
