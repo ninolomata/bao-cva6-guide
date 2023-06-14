@@ -1,5 +1,5 @@
 # CVA6 H-Extension Guide
-This guide provides a fully step by step tutorial on how to run a one core CVA6 based system with H-extension in a Genesys2 FPGA.
+This guide provides a fully step by step tutorial on how to run Mibench on a one core CVA6 based system with H-extension in a Genesys2 FPGA.
 # Table of Contents
 - [CVA6 H-Extension Guide](#cva6-h-extension-guide)
 - [Table of Contents](#table-of-contents)
@@ -11,6 +11,8 @@ This guide provides a fully step by step tutorial on how to run a one core CVA6 
   - [1.4) OpenSBI](#14-opensbi)
   - [2) Generate Bitstream with CVA6](#2-generate-bitstream-with-cva6)
     - [2.1) Booting on Genesys2](#21-booting-on-genesys2)
+  - [3) Running Mibench](#3-running-mibench)
+    - [3.1) Mibench Results](#32-mibench-results)
   - [Used tool versions](#used-tool-versions)
 
 # 0) Prologue
@@ -53,6 +55,7 @@ To build linux using the **cva6 sdk** run:
 
 `cd cva6-sdk`\
 `git submodule update --init --recursive`\
+`cp -r ../rootfs/mibench ./rootfs`
 `make images`
 
 > **_:notebook: Note:_** The following steps shall be done using the *riscv64-unknown-elf-* toolchain.
@@ -130,12 +133,25 @@ To build **opensbi** with just **linux** for fpga run:
 
 > **_:notebook: Note:_** The following steps shall be executed with *RISCV* environment variable set to where your RISC-V installation is located.
 
+### 2.1) CVA6 only hypervisor extension
+
 Hypervisor extension should be enabled by setting the parameter **CVA6ConfigHExtEn = 1** in the **cva6/core/include/cv64a6_imafdc_sv39_config_pkg.sv** file.
 To generate the FPGA bitstream (and memory configuration) yourself for the Genesys II board run:
 
 `cd cva6`\
 `git submodule update --init --recursive`\
 `make fpga -j${nproc}`
+
+### 2.1) CVA6 with virtualization otimizations
+
+CVA6 with virtualization otimiazations is located on the another branch **wip/hyp-opts-sstc**.
+`cd cva6`\
+`git checkout wip/hyp-opts-sstc`
+`git submodule update --init --recursive`\
+`make fpga -j${nproc}`
+
+By default the GTLB and L2 TLB are enabled. They can be disable by setting the parameter **GTLB_PRESENT = 0** or **L2_TLB_4K_PRESENT** or **L2_TLB_2M_PRESENT**.
+Sstc is enabled by default.
 
 ### 2.1) Booting on Genesys2
 
@@ -171,6 +187,22 @@ then write the image with
    Once programming is finished (around 10s) reset will be immediately lifted
    and you should see the Application boot process being reported on the UART console.
 
+
+## 3) Running Mibench
+
+Once linux is booted, run the following command:
+`source ./mibench/runme.sh`
+(Don't forget to save the log during the session).
+
+### 3.1) Mibench Results
+
+We provide a script to parse and display the mibench results using a python script. See inside **mibench_results** folder. 
+To use this script just create a folder inside **mibench_results/logs/logfile/mibench** with the name of the configuration and inside the logfile with the Mibench results. The folder name is used to identify the scenario.
+Once you have all the test scenarios just use the script to parse and display the results as follow:
+`cd mibench_results\logs`\
+`python3 run_mibench.py`
+
+Results can be fon inside the **mibench_results/results** folder.
 ## Used tool versions
 
 - riscv64-unknown-elf-gcc (SiFive GCC 10.1.0-2020.08.2) 10.1.0

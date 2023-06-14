@@ -1,0 +1,2698 @@
+qsort-small
+
+ Performance counter stats for './runme_small.sh' (12 runs):
+
+           # Table of individual measurements:
+           1.74011 (+0.05494) #
+           1.67983 (-0.00535) #
+           1.68105 (-0.00412) #
+           1.67888 (-0.00630) #
+           1.67709 (-0.00809) #
+           1.68322 (-0.00196) #
+           1.68023 (-0.00495) #
+           1.67973 (-0.00545) #
+           1.67784 (-0.00734) #
+           1.68333 (-0.00185) #
+           1.68421 (-0.00097) #
+           1.67661 (-0.00857) #
+
+           # Final result:
+           1.68518 +- 0.00504 seconds time elapsed  ( +-  0.30% )
+
+
+ Performance counter stats for './runme_small.sh':
+
+            618598      r1                                                          
+            422091      r2                                                          
+             84699      r3                                                          
+            108787      r4                                                          
+           5192514      r5                                                          
+           3385720      r6                                                          
+              5990      r7                                                          
+
+       1.778101760 seconds time elapsed
+
+       1.197327000 seconds user
+       0.524062000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            628172      r1                                                          
+            425651      r2                                                          
+             85978      r3                                                          
+            109585      r4                                                          
+           5208625      r5                                                          
+           3396241      r6                                                          
+              6057      r7                                                          
+
+       1.782059520 seconds time elapsed
+
+       1.229019000 seconds user
+       0.506107000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            634230      r1                                                          
+            425037      r2                                                          
+             86639      r3                                                          
+            109377      r4                                                          
+           5222969      r5                                                          
+           3404542      r6                                                          
+              6140      r7                                                          
+
+       1.803624960 seconds time elapsed
+
+       1.178280000 seconds user
+       0.561973000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            625954      r1                                                          
+            424050      r2                                                          
+             85074      r3                                                          
+            109049      r4                                                          
+           5200313      r5                                                          
+           3389608      r6                                                          
+              6013      r7                                                          
+
+       1.785036800 seconds time elapsed
+
+       1.202400000 seconds user
+       0.525937000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            625780      r1                                                          
+            425351      r2                                                          
+             85829      r3                                                          
+            108822      r4                                                          
+           5212360      r5                                                          
+           3398905      r6                                                          
+              6074      r7                                                          
+
+       1.784913920 seconds time elapsed
+
+       1.219708000 seconds user
+       0.511422000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            623855      r1                                                          
+            426364      r2                                                          
+             84940      r3                                                          
+            109100      r4                                                          
+           5195004      r5                                                          
+           3387402      r6                                                          
+              5988      r7                                                          
+
+       1.778398720 seconds time elapsed
+
+       1.182717000 seconds user
+       0.545223000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            624063      r1                                                          
+            422111      r2                                                          
+             85512      r3                                                          
+            108975      r4                                                          
+           5198005      r5                                                          
+           3388227      r6                                                          
+              6018      r7                                                          
+
+       1.780815360 seconds time elapsed
+
+       1.197908000 seconds user
+       0.529727000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            624555      r1                                                          
+            424708      r2                                                          
+             85090      r3                                                          
+            109248      r4                                                          
+           5197186      r5                                                          
+           3388102      r6                                                          
+              6004      r7                                                          
+
+       1.780029440 seconds time elapsed
+
+       1.197435000 seconds user
+       0.532335000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            617233      r1                                                          
+            422447      r2                                                          
+             84444      r3                                                          
+            108988      r4                                                          
+           5178540      r5                                                          
+           3378135      r6                                                          
+              5899      r7                                                          
+
+       1.759841280 seconds time elapsed
+
+       1.229186000 seconds user
+       0.493345000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            626443      r1                                                          
+            424985      r2                                                          
+             85698      r3                                                          
+            109206      r4                                                          
+           5205962      r5                                                          
+           3394304      r6                                                          
+              6079      r7                                                          
+
+       1.788963840 seconds time elapsed
+
+       1.199874000 seconds user
+       0.532378000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            638940      r1                                                          
+            425833      r2                                                          
+             87204      r3                                                          
+            109178      r4                                                          
+           5242655      r5                                                          
+           3417383      r6                                                          
+              6251      r7                                                          
+
+       1.812454400 seconds time elapsed
+
+       1.192805000 seconds user
+       0.553240000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            637405      r1                                                          
+            427444      r2                                                          
+             86912      r3                                                          
+            109733      r4                                                          
+           5228019      r5                                                          
+           3409174      r6                                                          
+              6164      r7                                                          
+
+       1.800616960 seconds time elapsed
+
+       1.179099000 seconds user
+       0.563116000 seconds sys
+
+
+qsort-large
+
+ Performance counter stats for './runme_large.sh' (12 runs):
+
+          # Table of individual measurements:
+          18.37251 (+0.02901) #
+          18.33160 (-0.01190) #
+          18.35127 (+0.00777) #
+          18.32742 (-0.01608) #
+          18.34760 (+0.00410) #
+          18.34051 (-0.00299) #
+          18.34701 (+0.00350) #
+          18.34757 (+0.00407) #
+          18.34787 (+0.00437) #
+          18.32808 (-0.01542) #
+          18.34396 (+0.00046) #
+          18.33662 (-0.00688) #
+
+          # Final result:
+          18.34350 +- 0.00355 seconds time elapsed  ( +-  0.02% )
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7064758      r1                                                          
+           2434670      r2                                                          
+            776269      r3                                                          
+            486895      r4                                                          
+          58603675      r5                                                          
+          44293945      r6                                                          
+             55632      r7                                                          
+
+      18.737781760 seconds time elapsed
+
+      16.849501000 seconds user
+       1.660038000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7087186      r1                                                          
+           2431196      r2                                                          
+            776199      r3                                                          
+            484300      r4                                                          
+          58595163      r5                                                          
+          44287599      r6                                                          
+             55607      r7                                                          
+
+      18.735449600 seconds time elapsed
+
+      16.823385000 seconds user
+       1.692741000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7040177      r1                                                          
+           2434927      r2                                                          
+            772655      r3                                                          
+            486790      r4                                                          
+          58516200      r5                                                          
+          44235614      r6                                                          
+             55135      r7                                                          
+
+      18.680378880 seconds time elapsed
+
+      16.923746000 seconds user
+       1.552208000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7063379      r1                                                          
+           2432523      r2                                                          
+            773690      r3                                                          
+            485231      r4                                                          
+          58549426      r5                                                          
+          44258793      r6                                                          
+             55347      r7                                                          
+
+      18.704491520 seconds time elapsed
+
+      16.916850000 seconds user
+       1.581597000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7031063      r1                                                          
+           2433055      r2                                                          
+            773119      r3                                                          
+            484278      r4                                                          
+          58507616      r5                                                          
+          44231813      r6                                                          
+             55098      r7                                                          
+
+      18.660014080 seconds time elapsed
+
+      16.838098000 seconds user
+       1.625504000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7061167      r1                                                          
+           2434332      r2                                                          
+            773102      r3                                                          
+            483720      r4                                                          
+          58542707      r5                                                          
+          44253500      r6                                                          
+             55279      r7                                                          
+
+      18.692904960 seconds time elapsed
+
+      16.758342000 seconds user
+       1.732138000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7046210      r1                                                          
+           2431940      r2                                                          
+            772277      r3                                                          
+            484908      r4                                                          
+          58512908      r5                                                          
+          44234202      r6                                                          
+             55149      r7                                                          
+
+      18.672445440 seconds time elapsed
+
+      16.922530000 seconds user
+       1.551381000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7068766      r1                                                          
+           2438513      r2                                                          
+            774307      r3                                                          
+            490185      r4                                                          
+          58565670      r5                                                          
+          44268920      r6                                                          
+             55416      r7                                                          
+
+      18.716160000 seconds time elapsed
+
+      16.906504000 seconds user
+       1.596875000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7042488      r1                                                          
+           2434025      r2                                                          
+            772386      r3                                                          
+            488642      r4                                                          
+          58509300      r5                                                          
+          44230665      r6                                                          
+             55128      r7                                                          
+
+      18.672168960 seconds time elapsed
+
+      16.913246000 seconds user
+       1.555885000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7051392      r1                                                          
+           2429790      r2                                                          
+            771941      r3                                                          
+            485062      r4                                                          
+          58507544      r5                                                          
+          44232161      r6                                                          
+             55078      r7                                                          
+
+      18.664204800 seconds time elapsed
+
+      16.909858000 seconds user
+       1.570205000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7044220      r1                                                          
+           2438088      r2                                                          
+            773995      r3                                                          
+            486714      r4                                                          
+          58544576      r5                                                          
+          44254721      r6                                                          
+             55306      r7                                                          
+
+      18.688683520 seconds time elapsed
+
+      16.792186000 seconds user
+       1.690411000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7026910      r1                                                          
+           2436961      r2                                                          
+            771854      r3                                                          
+            485585      r4                                                          
+          58504962      r5                                                          
+          44229514      r6                                                          
+             55090      r7                                                          
+
+      18.659735040 seconds time elapsed
+
+      16.897276000 seconds user
+       1.569244000 seconds sys
+
+
+susanc-small
+
+ Performance counter stats for './runme_small-c.sh' (12 runs):
+
+           # Table of individual measurements:
+           0.45592 (+0.04666) ###
+           0.40120 (-0.00807) #
+           0.40415 (-0.00511) #
+           0.40149 (-0.00777) #
+           0.40427 (-0.00499) #
+           0.40736 (-0.00190) #
+           0.40521 (-0.00405) #
+           0.40439 (-0.00487) #
+           0.40683 (-0.00243) #
+           0.40758 (-0.00168) #
+           0.40095 (-0.00831) #
+           0.41178 (+0.00252) #
+
+           # Final result:
+           0.40926 +- 0.00434 seconds time elapsed  ( +-  1.06% )
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            249940      r1                                                          
+             86786      r2                                                          
+             32647      r3                                                          
+             24415      r4                                                          
+           1184587      r5                                                          
+            590436      r6                                                          
+              2107      r7                                                          
+
+       0.496381440 seconds time elapsed
+
+       0.122705000 seconds user
+       0.323725000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            245872      r1                                                          
+             86362      r2                                                          
+             32272      r3                                                          
+             23826      r4                                                          
+           1170721      r5                                                          
+            582058      r6                                                          
+              2035      r7                                                          
+
+       0.491215360 seconds time elapsed
+
+       0.089491000 seconds user
+       0.354325000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            251999      r1                                                          
+             86717      r2                                                          
+             33043      r3                                                          
+             24360      r4                                                          
+           1186635      r5                                                          
+            591873      r6                                                          
+              2140      r7                                                          
+
+       0.502848000 seconds time elapsed
+
+       0.108501000 seconds user
+       0.340381000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            265977      r1                                                          
+             88170      r2                                                          
+             34605      r3                                                          
+             24540      r4                                                          
+           1229754      r5                                                          
+            619599      r6                                                          
+              2357      r7                                                          
+
+       0.535892480 seconds time elapsed
+
+       0.118302000 seconds user
+       0.348198000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            255023      r1                                                          
+             87247      r2                                                          
+             33358      r3                                                          
+             24478      r4                                                          
+           1198066      r5                                                          
+            599215      r6                                                          
+              2191      r7                                                          
+
+       0.507619840 seconds time elapsed
+
+       0.110449000 seconds user
+       0.342429000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            239028      r1                                                          
+             85660      r2                                                          
+             31243      r3                                                          
+             24077      r4                                                          
+           1152725      r5                                                          
+            569680      r6                                                          
+              1936      r7                                                          
+
+       0.479910400 seconds time elapsed
+
+       0.109702000 seconds user
+       0.325097000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            252116      r1                                                          
+             85722      r2                                                          
+             32848      r3                                                          
+             24041      r4                                                          
+           1184583      r5                                                          
+            591893      r6                                                          
+              2151      r7                                                          
+
+       0.505047040 seconds time elapsed
+
+       0.104288000 seconds user
+       0.346386000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            252635      r1                                                          
+             86460      r2                                                          
+             33138      r3                                                          
+             24574      r4                                                          
+           1192498      r5                                                          
+            595898      r6                                                          
+              2192      r7                                                          
+
+       0.511976960 seconds time elapsed
+
+       0.107297000 seconds user
+       0.340380000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            253467      r1                                                          
+             87291      r2                                                          
+             33210      r3                                                          
+             24039      r4                                                          
+           1194466      r5                                                          
+            597303      r6                                                          
+              2142      r7                                                          
+
+       0.507991040 seconds time elapsed
+
+       0.100852000 seconds user
+       0.354663000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            257500      r1                                                          
+             86320      r2                                                          
+             33324      r3                                                          
+             24450      r4                                                          
+           1199227      r5                                                          
+            601213      r6                                                          
+              2207      r7                                                          
+
+       0.511851520 seconds time elapsed
+
+       0.122016000 seconds user
+       0.332893000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            253954      r1                                                          
+             87253      r2                                                          
+             32963      r3                                                          
+             24303      r4                                                          
+           1193177      r5                                                          
+            597434      r6                                                          
+              2146      r7                                                          
+
+       0.514012160 seconds time elapsed
+
+       0.103662000 seconds user
+       0.348668000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-c.sh':
+
+            251740      r1                                                          
+             86150      r2                                                          
+             32707      r3                                                          
+             24090      r4                                                          
+           1187435      r5                                                          
+            592684      r6                                                          
+              2138      r7                                                          
+
+       0.504051200 seconds time elapsed
+
+       0.104933000 seconds user
+       0.344835000 seconds sys
+
+
+susanc-large
+
+ Performance counter stats for './runme_large-c.sh' (12 runs):
+
+           # Table of individual measurements:
+           1.24937 (+0.00483) #
+           1.24372 (-0.00082) #
+           1.24889 (+0.00435) #
+           1.24072 (-0.00382) #
+           1.24818 (+0.00364) #
+           1.24034 (-0.00420) #
+           1.24503 (+0.00048) #
+           1.24704 (+0.00250) #
+           1.23355 (-0.01099) #
+           1.24472 (+0.00018) #
+           1.25292 (+0.00838) #
+           1.24002 (-0.00452) #
+
+           # Final result:
+           1.24454 +- 0.00152 seconds time elapsed  ( +-  0.12% )
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            461912      r1                                                          
+            172429      r2                                                          
+             68181      r3                                                          
+             38698      r4                                                          
+           7607877      r5                                                          
+           2025371      r6                                                          
+              4740      r7                                                          
+
+       1.335918080 seconds time elapsed
+
+       0.693843000 seconds user
+       0.586453000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            455302      r1                                                          
+            171370      r2                                                          
+             67455      r3                                                          
+             38820      r4                                                          
+           7593710      r5                                                          
+           2015361      r6                                                          
+              4683      r7                                                          
+
+       1.328296960 seconds time elapsed
+
+       0.778981000 seconds user
+       0.501103000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            474149      r1                                                          
+            173876      r2                                                          
+             69356      r3                                                          
+             39629      r4                                                          
+           7643654      r5                                                          
+           2047116      r6                                                          
+              4953      r7                                                          
+
+       1.364357120 seconds time elapsed
+
+       0.725437000 seconds user
+       0.572045000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            461626      r1                                                          
+            172713      r2                                                          
+             68218      r3                                                          
+             39041      r4                                                          
+           7609064      r5                                                          
+           2025488      r6                                                          
+              4799      r7                                                          
+
+       1.339591680 seconds time elapsed
+
+       0.797293000 seconds user
+       0.486966000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            454588      r1                                                          
+            171685      r2                                                          
+             67133      r3                                                          
+             38457      r4                                                          
+           7588260      r5                                                          
+           2011046      r6                                                          
+              4653      r7                                                          
+
+       1.323166720 seconds time elapsed
+
+       0.733547000 seconds user
+       0.538424000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            484962      r1                                                          
+            174070      r2                                                          
+             70779      r3                                                          
+             39331      r4                                                          
+           7662328      r5                                                          
+           2061650      r6                                                          
+              5087      r7                                                          
+
+       1.379097600 seconds time elapsed
+
+       0.784380000 seconds user
+       0.520589000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            466312      r1                                                          
+            171793      r2                                                          
+             68509      r3                                                          
+             38849      r4                                                          
+           7618151      r5                                                          
+           2030711      r6                                                          
+              4859      r7                                                          
+
+       1.347133440 seconds time elapsed
+
+       0.726223000 seconds user
+       0.559467000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            478689      r1                                                          
+            174053      r2                                                          
+             70168      r3                                                          
+             39463      r4                                                          
+           7664454      r5                                                          
+           2059814      r6                                                          
+              5084      r7                                                          
+
+       1.383667200 seconds time elapsed
+
+       0.784735000 seconds user
+       0.521081000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            460586      r1                                                          
+            172621      r2                                                          
+             67851      r3                                                          
+             38797      r4                                                          
+           7610190      r5                                                          
+           2026017      r6                                                          
+              4778      r7                                                          
+
+       1.335388160 seconds time elapsed
+
+       0.754613000 seconds user
+       0.529850000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            456004      r1                                                          
+            171898      r2                                                          
+             67303      r3                                                          
+             38515      r4                                                          
+           7596647      r5                                                          
+           2017752      r6                                                          
+              4684      r7                                                          
+
+       1.331596800 seconds time elapsed
+
+       0.760819000 seconds user
+       0.516722000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            466082      r1                                                          
+            172420      r2                                                          
+             68657      r3                                                          
+             38889      r4                                                          
+           7621866      r5                                                          
+           2033758      r6                                                          
+              4835      r7                                                          
+
+       1.347453440 seconds time elapsed
+
+       0.720543000 seconds user
+       0.570861000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-c.sh':
+
+            470058      r1                                                          
+            174411      r2                                                          
+             69286      r3                                                          
+             39654      r4                                                          
+           7631286      r5                                                          
+           2039430      r6                                                          
+              4864      r7                                                          
+
+       1.352199680 seconds time elapsed
+
+       0.738593000 seconds user
+       0.554324000 seconds sys
+
+
+susane-small
+
+ Performance counter stats for './runme_small-e.sh' (12 runs):
+
+           # Table of individual measurements:
+           0.45212 (+0.00266) #
+           0.44888 (-0.00058) #
+           0.44139 (-0.00807) #
+           0.44792 (-0.00154) #
+           0.44897 (-0.00049) #
+           0.44802 (-0.00144) #
+           0.44473 (-0.00472) #
+           0.44957 (+0.00011) #
+           0.45185 (+0.00239) #
+           0.45103 (+0.00157) #
+           0.45223 (+0.00277) #
+           0.45679 (+0.00733) #
+
+           # Final result:
+           0.44946 +- 0.00113 seconds time elapsed  ( +-  0.25% )
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            251609      r1                                                          
+             88259      r2                                                          
+             33011      r3                                                          
+             24725      r4                                                          
+           1625594      r5                                                          
+            689993      r6                                                          
+              2184      r7                                                          
+
+       0.537482240 seconds time elapsed
+
+       0.173732000 seconds user
+       0.318228000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            254910      r1                                                          
+             88051      r2                                                          
+             33346      r3                                                          
+             24623      r4                                                          
+           1633433      r5                                                          
+            696004      r6                                                          
+              2244      r7                                                          
+
+       0.548039680 seconds time elapsed
+
+       0.140067000 seconds user
+       0.353894000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            255060      r1                                                          
+             87264      r2                                                          
+             33324      r3                                                          
+             24924      r4                                                          
+           1629287      r5                                                          
+            693098      r6                                                          
+              2222      r7                                                          
+
+       0.544064000 seconds time elapsed
+
+       0.156296000 seconds user
+       0.337148000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            247816      r1                                                          
+             87160      r2                                                          
+             32557      r3                                                          
+             24538      r4                                                          
+           1607871      r5                                                          
+            679150      r6                                                          
+              2108      r7                                                          
+
+       0.527910400 seconds time elapsed
+
+       0.145040000 seconds user
+       0.337640000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            263510      r1                                                          
+             88920      r2                                                          
+             34204      r3                                                          
+             24627      r4                                                          
+           1650155      r5                                                          
+            706983      r6                                                          
+              2319      r7                                                          
+
+       0.564697600 seconds time elapsed
+
+       0.157461000 seconds user
+       0.345284000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            261819      r1                                                          
+             87962      r2                                                          
+             34227      r3                                                          
+             24797      r4                                                          
+           1645496      r5                                                          
+            703955      r6                                                          
+              2328      r7                                                          
+
+       0.560491520 seconds time elapsed
+
+       0.156861000 seconds user
+       0.342397000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            253446      r1                                                          
+             88113      r2                                                          
+             33200      r3                                                          
+             24589      r4                                                          
+           1630771      r5                                                          
+            693354      r6                                                          
+              2224      r7                                                          
+
+       0.544064000 seconds time elapsed
+
+       0.150068000 seconds user
+       0.341338000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            263008      r1                                                          
+             88813      r2                                                          
+             34336      r3                                                          
+             24790      r4                                                          
+           1653211      r5                                                          
+            707607      r6                                                          
+              2339      r7                                                          
+
+       0.560079360 seconds time elapsed
+
+       0.152423000 seconds user
+       0.349738000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            249572      r1                                                          
+             87728      r2                                                          
+             32750      r3                                                          
+             24234      r4                                                          
+           1618876      r5                                                          
+            685616      r6                                                          
+              2148      r7                                                          
+
+       0.533916160 seconds time elapsed
+
+       0.146429000 seconds user
+       0.341985000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            259349      r1                                                          
+             88221      r2                                                          
+             33576      r3                                                          
+             24671      r4                                                          
+           1635251      r5                                                          
+            697119      r6                                                          
+              2257      r7                                                          
+
+       0.552348160 seconds time elapsed
+
+       0.130873000 seconds user
+       0.367696000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            266253      r1                                                          
+             88760      r2                                                          
+             34661      r3                                                          
+             24852      r4                                                          
+           1664991      r5                                                          
+            715085      r6                                                          
+              2399      r7                                                          
+
+       0.568583680 seconds time elapsed
+
+       0.134372000 seconds user
+       0.372325000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-e.sh':
+
+            264730      r1                                                          
+             87720      r2                                                          
+             34458      r3                                                          
+             24828      r4                                                          
+           1655147      r5                                                          
+            709555      r6                                                          
+              2374      r7                                                          
+
+       0.564172800 seconds time elapsed
+
+       0.151976000 seconds user
+       0.349228000 seconds sys
+
+
+susane-large
+
+ Performance counter stats for './runme_large-e.sh' (12 runs):
+
+           # Table of individual measurements:
+           2.91599 (-0.00305) #
+           2.92027 (+0.00123) #
+           2.92073 (+0.00170) #
+           2.92682 (+0.00779) #
+           2.91225 (-0.00679) #
+           2.91912 (+0.00009) #
+           2.91335 (-0.00569) #
+           2.91880 (-0.00023) #
+           2.92151 (+0.00247) #
+           2.91884 (-0.00020) #
+           2.92018 (+0.00115) #
+           2.92055 (+0.00152) #
+
+           # Final result:
+           2.91903 +- 0.00111 seconds time elapsed  ( +-  0.04% )
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            678292      r1                                                          
+            235919      r2                                                          
+            100359      r3                                                          
+             55060      r4                                                          
+          20844482      r5                                                          
+           6308253      r6                                                          
+              9686      r7                                                          
+
+       3.067944960 seconds time elapsed
+
+       2.490546000 seconds user
+       0.496259000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            661237      r1                                                          
+            234128      r2                                                          
+             98516      r3                                                          
+             54797      r4                                                          
+          20798220      r5                                                          
+           6278499      r6                                                          
+              9427      r7                                                          
+
+       3.034032640 seconds time elapsed
+
+       2.515343000 seconds user
+       0.456455000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            666916      r1                                                          
+            234841      r2                                                          
+             99034      r3                                                          
+             55028      r4                                                          
+          20816166      r5                                                          
+           6289400      r6                                                          
+              9512      r7                                                          
+
+       3.044088320 seconds time elapsed
+
+       2.487117000 seconds user
+       0.492730000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            664182      r1                                                          
+            233688      r2                                                          
+             98908      r3                                                          
+             54676      r4                                                          
+          20807726      r5                                                          
+           6285770      r6                                                          
+              9491      r7                                                          
+
+       3.044188160 seconds time elapsed
+
+       2.467765000 seconds user
+       0.505528000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            667398      r1                                                          
+            234107      r2                                                          
+             98814      r3                                                          
+             54719      r4                                                          
+          20808920      r5                                                          
+           6285213      r6                                                          
+              9511      r7                                                          
+
+       3.052705280 seconds time elapsed
+
+       2.492781000 seconds user
+       0.483057000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            665264      r1                                                          
+            234275      r2                                                          
+             99077      r3                                                          
+             54756      r4                                                          
+          20812733      r5                                                          
+           6289136      r6                                                          
+              9502      r7                                                          
+
+       3.044014080 seconds time elapsed
+
+       2.496722000 seconds user
+       0.481033000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            662594      r1                                                          
+            232932      r2                                                          
+             98150      r3                                                          
+             54754      r4                                                          
+          20796953      r5                                                          
+           6278588      r6                                                          
+              9414      r7                                                          
+
+       3.035217920 seconds time elapsed
+
+       2.491241000 seconds user
+       0.478332000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            660604      r1                                                          
+            233654      r2                                                          
+             98342      r3                                                          
+             54668      r4                                                          
+          20802658      r5                                                          
+           6281887      r6                                                          
+              9459      r7                                                          
+
+       3.047232000 seconds time elapsed
+
+       2.500864000 seconds user
+       0.467148000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            669367      r1                                                          
+            233905      r2                                                          
+             99129      r3                                                          
+             55120      r4                                                          
+          20818800      r5                                                          
+           6290725      r6                                                          
+              9537      r7                                                          
+
+       3.052467200 seconds time elapsed
+
+       2.477726000 seconds user
+       0.503191000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            660350      r1                                                          
+            231787      r2                                                          
+             98092      r3                                                          
+             54621      r4                                                          
+          20790854      r5                                                          
+           6274225      r6                                                          
+              9402      r7                                                          
+
+       3.036725760 seconds time elapsed
+
+       2.483974000 seconds user
+       0.487195000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            655578      r1                                                          
+            232400      r2                                                          
+             97540      r3                                                          
+             54574      r4                                                          
+          20785412      r5                                                          
+           6270892      r6                                                          
+              9371      r7                                                          
+
+       3.031416320 seconds time elapsed
+
+       2.508783000 seconds user
+       0.455900000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-e.sh':
+
+            678955      r1                                                          
+            235626      r2                                                          
+            100320      r3                                                          
+             55193      r4                                                          
+          20840053      r5                                                          
+           6305416      r6                                                          
+              9655      r7                                                          
+
+       3.067893760 seconds time elapsed
+
+       2.489961000 seconds user
+       0.501365000 seconds sys
+
+
+susans-small
+
+ Performance counter stats for './runme_small-s.sh' (12 runs):
+
+           # Table of individual measurements:
+           1.16031 (-0.00147) #
+           1.16395 (+0.00217) #
+           1.16447 (+0.00270) #
+           1.15779 (-0.00398) #
+           1.15261 (-0.00916) #
+           1.15959 (-0.00219) #
+           1.16745 (+0.00568) #
+           1.16082 (-0.00096) #
+           1.16344 (+0.00166) #
+           1.16328 (+0.00151) #
+           1.16304 (+0.00126) #
+           1.16454 (+0.00276) #
+
+           # Final result:
+           1.16177 +- 0.00112 seconds time elapsed  ( +-  0.10% )
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            323155      r1                                                          
+             93866      r2                                                          
+             49262      r3                                                          
+             31546      r4                                                          
+           6168410      r5                                                          
+            817140      r6                                                          
+              4249      r7                                                          
+
+       1.259719680 seconds time elapsed
+
+       0.866904000 seconds user
+       0.340604000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            318374      r1                                                          
+             92880      r2                                                          
+             48348      r3                                                          
+             31312      r4                                                          
+           6147080      r5                                                          
+            803666      r6                                                          
+              4162      r7                                                          
+
+       1.248133120 seconds time elapsed
+
+       0.845964000 seconds user
+       0.353631000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            316448      r1                                                          
+             93309      r2                                                          
+             48503      r3                                                          
+             31211      r4                                                          
+           6151162      r5                                                          
+            804924      r6                                                          
+              4168      r7                                                          
+
+       1.256117760 seconds time elapsed
+
+       0.856040000 seconds user
+       0.341107000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            326078      r1                                                          
+             93450      r2                                                          
+             49496      r3                                                          
+             31289      r4                                                          
+           6168049      r5                                                          
+            816722      r6                                                          
+              4304      r7                                                          
+
+       1.264893440 seconds time elapsed
+
+       0.850585000 seconds user
+       0.357755000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            324387      r1                                                          
+             93273      r2                                                          
+             49258      r3                                                          
+             31677      r4                                                          
+           6167797      r5                                                          
+            816160      r6                                                          
+              4248      r7                                                          
+
+       1.260480000 seconds time elapsed
+
+       0.856220000 seconds user
+       0.353251000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            318618      r1                                                          
+             92141      r2                                                          
+             48489      r3                                                          
+             31162      r4                                                          
+           6147482      r5                                                          
+            803460      r6                                                          
+              4172      r7                                                          
+
+       1.255738880 seconds time elapsed
+
+       0.852220000 seconds user
+       0.346028000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            330082      r1                                                          
+             94374      r2                                                          
+             50334      r3                                                          
+             31773      r4                                                          
+           6188274      r5                                                          
+            830565      r6                                                          
+              4365      r7                                                          
+
+       1.272816640 seconds time elapsed
+
+       0.860275000 seconds user
+       0.355658000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            320204      r1                                                          
+             92768      r2                                                          
+             48740      r3                                                          
+             31228      r4                                                          
+           6158822      r5                                                          
+            809974      r6                                                          
+              4217      r7                                                          
+
+       1.259494400 seconds time elapsed
+
+       0.834130000 seconds user
+       0.368618000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            322767      r1                                                          
+             93129      r2                                                          
+             48938      r3                                                          
+             31560      r4                                                          
+           6155960      r5                                                          
+            809236      r6                                                          
+              4208      r7                                                          
+
+       1.256345600 seconds time elapsed
+
+       0.861889000 seconds user
+       0.342790000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            328221      r1                                                          
+             93806      r2                                                          
+             49619      r3                                                          
+             31423      r4                                                          
+           6176559      r5                                                          
+            821961      r6                                                          
+              4303      r7                                                          
+
+       1.271744000 seconds time elapsed
+
+       0.854290000 seconds user
+       0.354702000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            318347      r1                                                          
+             93752      r2                                                          
+             48559      r3                                                          
+             31866      r4                                                          
+           6151577      r5                                                          
+            805636      r6                                                          
+              4165      r7                                                          
+
+       1.252968960 seconds time elapsed
+
+       0.867220000 seconds user
+       0.335131000 seconds sys
+
+
+
+ Performance counter stats for './runme_small-s.sh':
+
+            319780      r1                                                          
+             92942      r2                                                          
+             48582      r3                                                          
+             31549      r4                                                          
+           6151052      r5                                                          
+            806418      r6                                                          
+              4178      r7                                                          
+
+       1.255582720 seconds time elapsed
+
+       0.864769000 seconds user
+       0.333187000 seconds sys
+
+
+susans-large
+
+ Performance counter stats for './runme_large-s.sh' (12 runs):
+
+         # Table of individual measurements:
+         12.484780 (-0.003255) #
+         12.485215 (-0.002820) #
+         12.487892 (-0.000142) #
+         12.492142 (+0.004107) #
+         12.486817 (-0.001217) #
+         12.488404 (+0.000370) #
+         12.491988 (+0.003954) #
+         12.492052 (+0.004018) #
+         12.484408 (-0.003626) #
+         12.487219 (-0.000816) #
+         12.487649 (-0.000385) #
+         12.487849 (-0.000186) #
+
+         # Final result:
+         12.488035 +- 0.000792 seconds time elapsed  ( +-  0.01% )
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1529114      r1                                                          
+            263856      r2                                                          
+            312411      r3                                                          
+            148478      r4                                                          
+          81811175      r5                                                          
+           4889757      r6                                                          
+             36807      r7                                                          
+
+      12.706027520 seconds time elapsed
+
+      11.998956000 seconds user
+       0.581938000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1560748      r1                                                          
+            267511      r2                                                          
+            316447      r3                                                          
+            149985      r4                                                          
+          81909398      r5                                                          
+           4952887      r6                                                          
+             37353      r7                                                          
+
+      12.776552960 seconds time elapsed
+
+      11.996631000 seconds user
+       0.624747000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1541294      r1                                                          
+            265027      r2                                                          
+            313307      r3                                                          
+            149396      r4                                                          
+          81841975      r5                                                          
+           4909786      r6                                                          
+             36955      r7                                                          
+
+      12.731760640 seconds time elapsed
+
+      12.013129000 seconds user
+       0.580163000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1532572      r1                                                          
+            263744      r2                                                          
+            312854      r3                                                          
+            148665      r4                                                          
+          81822189      r5                                                          
+           4897559      r6                                                          
+             36818      r7                                                          
+
+      12.712634880 seconds time elapsed
+
+      12.020979000 seconds user
+       0.566550000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1533077      r1                                                          
+            264254      r2                                                          
+            312518      r3                                                          
+            149196      r4                                                          
+          81820376      r5                                                          
+           4895872      r6                                                          
+             36873      r7                                                          
+
+      12.715456000 seconds time elapsed
+
+      12.012231000 seconds user
+       0.571827000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1547761      r1                                                          
+            265714      r2                                                          
+            314946      r3                                                          
+            149332      r4                                                          
+          81867426      r5                                                          
+           4927281      r6                                                          
+             37110      r7                                                          
+
+      12.747950080 seconds time elapsed
+
+      12.002411000 seconds user
+       0.598300000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1552706      r1                                                          
+            266104      r2                                                          
+            315241      r3                                                          
+            149743      r4                                                          
+          81879707      r5                                                          
+           4933987      r6                                                          
+             37187      r7                                                          
+
+      12.756628480 seconds time elapsed
+
+      12.002220000 seconds user
+       0.607528000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1536790      r1                                                          
+            264487      r2                                                          
+            313023      r3                                                          
+            148902      r4                                                          
+          81830658      r5                                                          
+           4902567      r6                                                          
+             36915      r7                                                          
+
+      12.724057600 seconds time elapsed
+
+      12.003019000 seconds user
+       0.589310000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1546271      r1                                                          
+            265391      r2                                                          
+            314459      r3                                                          
+            150209      r4                                                          
+          81857497      r5                                                          
+           4920129      r6                                                          
+             37073      r7                                                          
+
+      12.744215040 seconds time elapsed
+
+      12.009193000 seconds user
+       0.595588000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1535486      r1                                                          
+            264523      r2                                                          
+            313248      r3                                                          
+            149347      r4                                                          
+          81833524      r5                                                          
+           4905391      r6                                                          
+             36919      r7                                                          
+
+      12.720302080 seconds time elapsed
+
+      12.021371000 seconds user
+       0.570218000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1538263      r1                                                          
+            264710      r2                                                          
+            313171      r3                                                          
+            149423      r4                                                          
+          81837349      r5                                                          
+           4906389      r6                                                          
+             36948      r7                                                          
+
+      12.731770880 seconds time elapsed
+
+      12.023601000 seconds user
+       0.566496000 seconds sys
+
+
+
+ Performance counter stats for './runme_large-s.sh':
+
+           1546067      r1                                                          
+            264795      r2                                                          
+            314202      r3                                                          
+            149618      r4                                                          
+          81854624      r5                                                          
+           4918089      r6                                                          
+             37025      r7                                                          
+
+      12.731811840 seconds time elapsed
+
+      12.020930000 seconds user
+       0.581590000 seconds sys
+
+
+bitcount-small
+
+ Performance counter stats for './runme_small.sh' (12 runs):
+
+           # Table of individual measurements:
+           1.43179 (+0.05644) #
+           1.37186 (-0.00349) #
+           1.36483 (-0.01052) #
+           1.37169 (-0.00365) #
+           1.37222 (-0.00312) #
+           1.36795 (-0.00739) #
+           1.36754 (-0.00780) #
+           1.36804 (-0.00730) #
+           1.36923 (-0.00611) #
+           1.37451 (-0.00084) #
+           1.37187 (-0.00347) #
+           1.37260 (-0.00275) #
+
+           # Final result:
+           1.37535 +- 0.00519 seconds time elapsed  ( +-  0.38% )
+
+
+ Performance counter stats for './runme_small.sh':
+
+            341580      r1                                                          
+             89227      r2                                                          
+             53036      r3                                                          
+             30847      r4                                                          
+           3130948      r5                                                          
+            860071      r6                                                          
+              4819      r7                                                          
+
+       1.475924480 seconds time elapsed
+
+       1.092861000 seconds user
+       0.324536000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            330543      r1                                                          
+             88367      r2                                                          
+             51803      r3                                                          
+             30466      r4                                                          
+           3100389      r5                                                          
+            841758      r6                                                          
+              4667      r7                                                          
+
+       1.453678080 seconds time elapsed
+
+       1.077028000 seconds user
+       0.332131000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            332331      r1                                                          
+             88867      r2                                                          
+             52043      r3                                                          
+             30343      r4                                                          
+           3108654      r5                                                          
+            846061      r6                                                          
+              4711      r7                                                          
+
+       1.459601920 seconds time elapsed
+
+       1.092574000 seconds user
+       0.320169000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            332438      r1                                                          
+             87487      r2                                                          
+             51785      r3                                                          
+             30595      r4                                                          
+           3100314      r5                                                          
+            840463      r6                                                          
+              4680      r7                                                          
+
+       1.458611200 seconds time elapsed
+
+       1.095035000 seconds user
+       0.315350000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            357417      r1                                                          
+             90231      r2                                                          
+             54961      r3                                                          
+             31570      r4                                                          
+           3169035      r5                                                          
+            885524      r6                                                          
+              5063      r7                                                          
+
+       1.504793600 seconds time elapsed
+
+       1.084589000 seconds user
+       0.353423000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            331015      r1                                                          
+             88357      r2                                                          
+             51643      r3                                                          
+             30519      r4                                                          
+           3097924      r5                                                          
+            839699      r6                                                          
+              4639      r7                                                          
+
+       1.451571200 seconds time elapsed
+
+       1.091681000 seconds user
+       0.318911000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            338508      r1                                                          
+             88391      r2                                                          
+             52407      r3                                                          
+             30749      r4                                                          
+           3114199      r5                                                          
+            851745      r6                                                          
+              4745      r7                                                          
+
+       1.465088000 seconds time elapsed
+
+       1.091332000 seconds user
+       0.327877000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            326402      r1                                                          
+             87417      r2                                                          
+             51054      r3                                                          
+             30219      r4                                                          
+           3085403      r5                                                          
+            831573      r6                                                          
+              4609      r7                                                          
+
+       1.450255360 seconds time elapsed
+
+       1.082960000 seconds user
+       0.321166000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            345175      r1                                                          
+             89563      r2                                                          
+             53639      r3                                                          
+             31200      r4                                                          
+           3140307      r5                                                          
+            866123      r6                                                          
+              4875      r7                                                          
+
+       1.481717760 seconds time elapsed
+
+       1.081658000 seconds user
+       0.348513000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            345354      r1                                                          
+             89700      r2                                                          
+             53377      r3                                                          
+             31326      r4                                                          
+           3140428      r5                                                          
+            865504      r6                                                          
+              4890      r7                                                          
+
+       1.488645120 seconds time elapsed
+
+       1.095410000 seconds user
+       0.331825000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            328854      r1                                                          
+             86861      r2                                                          
+             51129      r3                                                          
+             30466      r4                                                          
+           3085451      r5                                                          
+            833147      r6                                                          
+              4611      r7                                                          
+
+       1.448256000 seconds time elapsed
+
+       1.092375000 seconds user
+       0.310594000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+            339414      r1                                                          
+             88850      r2                                                          
+             52869      r3                                                          
+             30983      r4                                                          
+           3124022      r5                                                          
+            855607      r6                                                          
+              4786      r7                                                          
+
+       1.472606720 seconds time elapsed
+
+       1.082808000 seconds user
+       0.339686000 seconds sys
+
+
+bitcount-large
+
+ Performance counter stats for './runme_large.sh' (12 runs):
+
+          # Table of individual measurements:
+          15.52929 (+0.00956) #
+          15.52266 (+0.00293) #
+          15.51628 (-0.00345) #
+          15.51598 (-0.00374) #
+          15.51884 (-0.00089) #
+          15.51608 (-0.00364) #
+          15.52412 (+0.00439) #
+          15.51509 (-0.00463) #
+          15.51858 (-0.00115) #
+          15.51527 (-0.00446) #
+          15.52076 (+0.00104) #
+          15.52376 (+0.00403) #
+
+          # Final result:
+          15.51973 +- 0.00129 seconds time elapsed  ( +-  0.01% )
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1776144      r1                                                          
+            214390      r2                                                          
+            368459      r3                                                          
+            132230      r4                                                          
+          34986529      r5                                                          
+           5675257      r6                                                          
+             45367      r7                                                          
+
+      15.755737600 seconds time elapsed
+
+      15.105067000 seconds user
+       0.522140000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1802571      r1                                                          
+            218079      r2                                                          
+            373361      r3                                                          
+            133313      r4                                                          
+          35068896      r5                                                          
+           5728862      r6                                                          
+             45850      r7                                                          
+
+      15.820410880 seconds time elapsed
+
+      15.105594000 seconds user
+       0.554613000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1802178      r1                                                          
+            217575      r2                                                          
+            373348      r3                                                          
+            132428      r4                                                          
+          35061444      r5                                                          
+           5724576      r6                                                          
+             45810      r7                                                          
+
+      15.812951040 seconds time elapsed
+
+      15.128593000 seconds user
+       0.531248000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1782822      r1                                                          
+            215912      r2                                                          
+            371396      r3                                                          
+            132940      r4                                                          
+          35011043      r5                                                          
+           5692304      r6                                                          
+             45530      r7                                                          
+
+      15.778951680 seconds time elapsed
+
+      15.123534000 seconds user
+       0.517338000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1793507      r1                                                          
+            216537      r2                                                          
+            372182      r3                                                          
+            132890      r4                                                          
+          35048833      r5                                                          
+           5715562      r6                                                          
+             45711      r7                                                          
+
+      15.808151040 seconds time elapsed
+
+      15.100876000 seconds user
+       0.551585000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1772541      r1                                                          
+            216278      r2                                                          
+            370135      r3                                                          
+            132228      r4                                                          
+          34997351      r5                                                          
+           5682737      r6                                                          
+             45427      r7                                                          
+
+      15.769031680 seconds time elapsed
+
+      15.119036000 seconds user
+       0.511862000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1797738      r1                                                          
+            216667      r2                                                          
+            372891      r3                                                          
+            134102      r4                                                          
+          35057515      r5                                                          
+           5720506      r6                                                          
+             45765      r7                                                          
+
+      15.807923200 seconds time elapsed
+
+      15.091240000 seconds user
+       0.566211000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1787887      r1                                                          
+            216794      r2                                                          
+            372426      r3                                                          
+            132931      r4                                                          
+          35030769      r5                                                          
+           5705097      r6                                                          
+             45630      r7                                                          
+
+      15.796200960 seconds time elapsed
+
+      15.123843000 seconds user
+       0.522999000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1795677      r1                                                          
+            218401      r2                                                          
+            372628      r3                                                          
+            131439      r4                                                          
+          35054058      r5                                                          
+           5718673      r6                                                          
+             45758      r7                                                          
+
+      15.807738880 seconds time elapsed
+
+      15.110014000 seconds user
+       0.545993000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1792228      r1                                                          
+            216394      r2                                                          
+            371383      r3                                                          
+            136562      r4                                                          
+          35036823      r5                                                          
+           5708607      r6                                                          
+             45624      r7                                                          
+
+      15.792343040 seconds time elapsed
+
+      15.121504000 seconds user
+       0.527775000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1782356      r1                                                          
+            215228      r2                                                          
+            371004      r3                                                          
+            132605      r4                                                          
+          35015382      r5                                                          
+           5693504      r6                                                          
+             45537      r7                                                          
+
+      15.779955200 seconds time elapsed
+
+      15.111483000 seconds user
+       0.524571000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           1800874      r1                                                          
+            216809      r2                                                          
+            372674      r3                                                          
+            133340      r4                                                          
+          35069010      r5                                                          
+           5730138      r6                                                          
+             45838      r7                                                          
+
+      15.820523520 seconds time elapsed
+
+      15.086652000 seconds user
+       0.571249000 seconds sys
+
+
+basicmath-small
+
+ Performance counter stats for './runme_small.sh' (12 runs):
+
+           # Table of individual measurements:
+           4.62460 (+0.05364) #
+           4.56878 (-0.00219) #
+           4.56479 (-0.00618) #
+           4.56677 (-0.00420) #
+           4.56876 (-0.00221) #
+           4.56430 (-0.00667) #
+           4.56501 (-0.00595) #
+           4.56061 (-0.01035) #
+           4.57240 (+0.00143) #
+           4.56444 (-0.00653) #
+           4.56275 (-0.00821) #
+           4.56840 (-0.00257) #
+
+           # Final result:
+           4.57097 +- 0.00496 seconds time elapsed  ( +-  0.11% )
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2202482      r1                                                          
+            138407      r2                                                          
+            133951      r3                                                          
+             72304      r4                                                          
+           7604383      r5                                                          
+           6108194      r6                                                          
+             13987      r7                                                          
+
+       4.708311040 seconds time elapsed
+
+       4.259402000 seconds user
+       0.377085000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2207902      r1                                                          
+            137825      r2                                                          
+            134700      r3                                                          
+             71806      r4                                                          
+           7628601      r5                                                          
+           6123507      r6                                                          
+             14124      r7                                                          
+
+       4.728826880 seconds time elapsed
+
+       4.254462000 seconds user
+       0.391313000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2192630      r1                                                          
+            136812      r2                                                          
+            133099      r3                                                          
+             72112      r4                                                          
+           7587574      r5                                                          
+           6097838      r6                                                          
+             13894      r7                                                          
+
+       4.700869120 seconds time elapsed
+
+       4.246408000 seconds user
+       0.381446000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2185426      r1                                                          
+            135726      r2                                                          
+            132099      r3                                                          
+             71288      r4                                                          
+           7565366      r5                                                          
+           6082577      r6                                                          
+             13795      r7                                                          
+
+       4.684572160 seconds time elapsed
+
+       4.255923000 seconds user
+       0.365375000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2197055      r1                                                          
+            137347      r2                                                          
+            133378      r3                                                          
+             71650      r4                                                          
+           7589991      r5                                                          
+           6099548      r6                                                          
+             13914      r7                                                          
+
+       4.705328640 seconds time elapsed
+
+       4.260476000 seconds user
+       0.369636000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2181252      r1                                                          
+            135838      r2                                                          
+            131871      r3                                                          
+             71684      r4                                                          
+           7568655      r5                                                          
+           6085056      r6                                                          
+             13789      r7                                                          
+
+       4.689034240 seconds time elapsed
+
+       4.268760000 seconds user
+       0.345575000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2210296      r1                                                          
+            138049      r2                                                          
+            134700      r3                                                          
+             72224      r4                                                          
+           7621192      r5                                                          
+           6119670      r6                                                          
+             14089      r7                                                          
+
+       4.725857280 seconds time elapsed
+
+       4.252671000 seconds user
+       0.392376000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2195817      r1                                                          
+            136840      r2                                                          
+            133167      r3                                                          
+             72421      r4                                                          
+           7588817      r5                                                          
+           6098553      r6                                                          
+             13908      r7                                                          
+
+       4.699048960 seconds time elapsed
+
+       4.263064000 seconds user
+       0.372337000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2206301      r1                                                          
+            136800      r2                                                          
+            134038      r3                                                          
+             71696      r4                                                          
+           7609823      r5                                                          
+           6111956      r6                                                          
+             14068      r7                                                          
+
+       4.719984640 seconds time elapsed
+
+       4.253800000 seconds user
+       0.383468000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2199044      r1                                                          
+            136579      r2                                                          
+            133594      r3                                                          
+             71705      r4                                                          
+           7594869      r5                                                          
+           6103103      r6                                                          
+             13945      r7                                                          
+
+       4.702830080 seconds time elapsed
+
+       4.260553000 seconds user
+       0.373778000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2208687      r1                                                          
+            137357      r2                                                          
+            134584      r3                                                          
+             72389      r4                                                          
+           7617242      r5                                                          
+           6116123      r6                                                          
+             14064      r7                                                          
+
+       4.717608960 seconds time elapsed
+
+       4.254936000 seconds user
+       0.391906000 seconds sys
+
+
+
+ Performance counter stats for './runme_small.sh':
+
+           2197233      r1                                                          
+            137139      r2                                                          
+            133598      r3                                                          
+             71704      r4                                                          
+           7595378      r5                                                          
+           6101473      r6                                                          
+             13958      r7                                                          
+
+       4.707919360 seconds time elapsed
+
+       4.269001000 seconds user
+       0.364317000 seconds sys
+
+
+basicmath-large
+
+ Performance counter stats for './runme_large.sh' (12 runs):
+
+          # Table of individual measurements:
+          14.78420 (+0.03840) #
+          14.74769 (+0.00189) #
+          14.73634 (-0.00946) #
+          14.73886 (-0.00694) #
+          14.73655 (-0.00925) #
+          14.74688 (+0.00108) #
+          14.73874 (-0.00706) #
+          14.74453 (-0.00127) #
+          14.74442 (-0.00137) #
+          14.75487 (+0.00907) #
+          14.73685 (-0.00895) #
+          14.73966 (-0.00614) #
+
+          # Final result:
+          14.74580 +- 0.00385 seconds time elapsed  ( +-  0.03% )
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7290573      r1                                                          
+            262289      r2                                                          
+            369683      r3                                                          
+            186715      r4                                                          
+          22244715      r5                                                          
+          18661401      r6                                                          
+             43242      r7                                                          
+
+      15.007851520 seconds time elapsed
+
+      14.353858000 seconds user
+       0.516124000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7273760      r1                                                          
+            253628      r2                                                          
+            367594      r3                                                          
+            186244      r4                                                          
+          22203204      r5                                                          
+          18636443      r6                                                          
+             43025      r7                                                          
+
+      14.980503040 seconds time elapsed
+
+      14.349855000 seconds user
+       0.498840000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7278932      r1                                                          
+            259314      r2                                                          
+            368816      r3                                                          
+            185577      r4                                                          
+          22235855      r5                                                          
+          18655975      r6                                                          
+             43207      r7                                                          
+
+      14.999874560 seconds time elapsed
+
+      14.350411000 seconds user
+       0.505818000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7306121      r1                                                          
+            257408      r2                                                          
+            371664      r3                                                          
+            186791      r4                                                          
+          22289534      r5                                                          
+          18691099      r6                                                          
+             43538      r7                                                          
+
+      15.039925760 seconds time elapsed
+
+      14.357561000 seconds user
+       0.528559000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7283813      r1                                                          
+            255872      r2                                                          
+            369238      r3                                                          
+            186042      r4                                                          
+          22247506      r5                                                          
+          18662574      r6                                                          
+             43273      r7                                                          
+
+      15.007700480 seconds time elapsed
+
+      14.328619000 seconds user
+       0.531767000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7299446      r1                                                          
+            256161      r2                                                          
+            370951      r3                                                          
+            187120      r4                                                          
+          22275861      r5                                                          
+          18682819      r6                                                          
+             43425      r7                                                          
+
+      15.028508160 seconds time elapsed
+
+      14.346613000 seconds user
+       0.532810000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7295481      r1                                                          
+            256718      r2                                                          
+            370525      r3                                                          
+            185537      r4                                                          
+          22274556      r5                                                          
+          18680281      r6                                                          
+             43435      r7                                                          
+
+      15.024908800 seconds time elapsed
+
+      14.339989000 seconds user
+       0.531091000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7298777      r1                                                          
+            256061      r2                                                          
+            370306      r3                                                          
+            186637      r4                                                          
+          22275423      r5                                                          
+          18682077      r6                                                          
+             43459      r7                                                          
+
+      15.032919040 seconds time elapsed
+
+      14.337606000 seconds user
+       0.536787000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7285179      r1                                                          
+            255546      r2                                                          
+            368973      r3                                                          
+            186016      r4                                                          
+          22231219      r5                                                          
+          18652608      r6                                                          
+             43181      r7                                                          
+
+      14.996431360 seconds time elapsed
+
+      14.345744000 seconds user
+       0.511883000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7280538      r1                                                          
+            255448      r2                                                          
+            368912      r3                                                          
+            186847      r4                                                          
+          22238787      r5                                                          
+          18657646      r6                                                          
+             43210      r7                                                          
+
+      14.999964160 seconds time elapsed
+
+      14.334792000 seconds user
+       0.520907000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7298166      r1                                                          
+            256044      r2                                                          
+            370443      r3                                                          
+            187365      r4                                                          
+          22273811      r5                                                          
+          18679150      r6                                                          
+             43429      r7                                                          
+
+      15.032058880 seconds time elapsed
+
+      14.347922000 seconds user
+       0.524699000 seconds sys
+
+
+
+ Performance counter stats for './runme_large.sh':
+
+           7294657      r1                                                          
+            256169      r2                                                          
+            369675      r3                                                          
+            185443      r4                                                          
+          22269092      r5                                                          
+          18678121      r6                                                          
+             43388      r7                                                          
+
+      15.024058880 seconds time elapsed
+
+      14.341842000 seconds user
+       0.529817000 seconds sys
