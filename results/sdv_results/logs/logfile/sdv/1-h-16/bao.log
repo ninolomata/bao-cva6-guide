@@ -1,0 +1,167 @@
+disparity-qcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+          # Table of individual measurements:
+          11.74675 (-0.00605) #
+          11.74897 (-0.00383) #
+          11.75286 (+0.00005) #
+          11.76029 (+0.00748) #
+          11.75516 (+0.00235) #
+
+          # Final result:
+          11.75281 +- 0.00238 seconds time elapsed  ( +-  0.02% )
+
+disparity-sqcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+           # Table of individual measurements:
+           5.51230 (-0.00394) #
+           5.51542 (-0.00082) #
+           5.51676 (+0.00052) #
+           5.51289 (-0.00335) #
+           5.52382 (+0.00758) #
+
+           # Final result:
+           5.51623 +- 0.00206 seconds time elapsed  ( +-  0.04% )
+
+localization-qcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+           # Table of individual measurements:
+           8.79045 (+0.00937) #
+           8.78026 (-0.00082) #
+           8.77841 (-0.00267) #
+           8.77966 (-0.00143) #
+           8.77662 (-0.00446) #
+
+           # Final result:
+           8.78108 +- 0.00242 seconds time elapsed  ( +-  0.03% )
+
+localization-sqcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+           # Table of individual measurements:
+           1.41704 (-0.00359) #
+           1.41933 (-0.00130) #
+           1.42064 (+0.00002) #
+           1.42323 (+0.00260) #
+           1.42289 (+0.00227) #
+
+           # Final result:
+           1.42063 +- 0.00115 seconds time elapsed  ( +-  0.08% )
+
+mser-qcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+           # Table of individual measurements:
+           3.54828 (+0.00072) #
+           3.54269 (-0.00487) #
+           3.55150 (+0.00393) #
+           3.54786 (+0.00030) #
+           3.54749 (-0.00007) #
+
+           # Final result:
+           3.54757 +- 0.00141 seconds time elapsed  ( +-  0.04% )
+
+mser-sqcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+          # Table of individual measurements:
+          1.173007 (+0.002033) #
+          1.171794 (+0.000820) #
+          1.170660 (-0.000314) #
+          1.168415 (-0.002559) #
+          1.170995 (+0.000021) #
+
+          # Final result:
+          1.170974 +- 0.000757 seconds time elapsed  ( +-  0.06% )
+
+sift-qcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+           # Table of individual measurements:
+           12.3886 (+0.0419) #
+           12.3439 (-0.0029) #
+           12.3314 (-0.0154) #
+           12.3356 (-0.0112) #
+           12.3344 (-0.0124) #
+
+           # Final result:
+           12.3468 +- 0.0107 seconds time elapsed  ( +-  0.09% )
+
+sift-sqcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+           # Table of individual measurements:
+           5.38495 (+0.02041) #
+           5.37209 (+0.00755) #
+           5.35503 (-0.00951) #
+           5.35309 (-0.01145) #
+           5.35754 (-0.00700) #
+
+           # Final result:
+           5.36454 +- 0.00610 seconds time elapsed  ( +-  0.11% )
+
+stitch-qcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+          # Table of individual measurements:
+          10.12427 (+0.00446) #
+          10.13158 (+0.01177) #
+          10.11259 (-0.00721) #
+          10.11426 (-0.00554) #
+          10.11633 (-0.00348) #
+
+          # Final result:
+          10.11981 +- 0.00356 seconds time elapsed  ( +-  0.04% )
+
+stitch-sqcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+           # Table of individual measurements:
+           3.69713 (+0.00131) #
+           3.69182 (-0.00400) #
+           3.69983 (+0.00402) #
+           3.69477 (-0.00105) #
+           3.69554 (-0.00027) #
+
+           # Final result:
+           3.69582 +- 0.00132 seconds time elapsed  ( +-  0.04% )
+
+tracking-qcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+           # Table of individual measurements:
+           8.59601 (+0.01422) #
+           8.57607 (-0.00571) #
+           8.58053 (-0.00125) #
+           8.57709 (-0.00470) #
+           8.57923 (-0.00255) #
+
+           # Final result:
+           8.58179 +- 0.00364 seconds time elapsed  ( +-  0.04% )
+
+tracking-sqcif
+
+ Performance counter stats for './runme.sh' (5 runs):
+
+           # Table of individual measurements:
+           3.11988 (+0.00614) #
+           3.11289 (-0.00085) #
+           3.11285 (-0.00089) #
+           3.11477 (+0.00103) #
+           3.10832 (-0.00542) #
+
+           # Final result:
+           3.11374 +- 0.00187 seconds time elapsed  ( +-  0.06% )

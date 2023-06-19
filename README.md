@@ -202,7 +202,23 @@ Once you have all the test scenarios just use the script to parse and display th
 `cd mibench_results\logs`\
 `python3 run_mibench.py`
 
-Results can be fon inside the **mibench_results/results** folder.
+After, results can be found inside the **mibench_results/results** folder.
+
+## 4) Running SDV
+
+Once linux is booted, run the following command:
+`source ./sdv-run/runme.sh`
+(Don't forget to save the log during the session).
+
+### 4.1) SDV Results
+
+We provide a script to parse and display the sdv results using a python script. See inside **sdv_results** folder. 
+To use this script just create a folder inside **sdv_results/logs/logfile/sdv** with the name of the configuration and inside the logfile with the SDV results. The folder name is used to identify the scenario.
+Once you have all the test scenarios just use the script to parse and display the results as follow:
+`cd sdv_results\logs`\
+`python3 run_sdv.py`
+
+After, results can be found inside the **sdv_results/results** folder.
 ## Used tool versions
 
 - riscv64-unknown-elf-gcc (SiFive GCC 10.1.0-2020.08.2) 10.1.0
