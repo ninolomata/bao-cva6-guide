@@ -45,7 +45,7 @@ To build the bare-metal guest for the cva6:
 
 `cd bao-baremetal-guest`\
 `cp -r ../guest/platform/* ./src/platform`\
-`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=cva6`
+`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=culsans`
 
 ## 1.2) CVA6 SDK Linux
 
@@ -57,21 +57,28 @@ To build linux using the **cva6 sdk** run:
 
 > **_:notebook: Note:_** The following steps shall be done using the *riscv64-unknown-elf-* toolchain.
 
-Next, build the cva6 device tree:
+
+Next, build the culsans device tree for **culsans-one** (linux with one core) and **culsans-dual** (linux with two cores):
+
 
 `cd ../linux`\
-`dtc cva6-ariane-minimal-bao.dts > cva6-ariane-minimal-bao.dtb`\
-`dtc cva6-ariane-minimal.dts > cva6-ariane-minimal.dtb`
+`dtc culsans-one.dts > culsans-one.dtb`\
+`dtc culsans-dual.dts > culsans-dual.dtb`
 
 And build the final image by concatening the minimal bootloader, linux and device tree binaries:
 
 `cd lloader`\
-`make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../cva6-ariane-minimal-bao.dtb TARGET=linux-rv64-cva6`
+`make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../culsans-one.dtb TARGET=linux-rv64-culsans-one`\
+`make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../culsans-dual.dtb TARGET=linux-rv64-culsans-dual`
 
 ## 1.3) Bao
 
 > **_:notebook: Note:_** The following steps shall be done using the *riscv64-unknown-elf-* toolchain and as so, the toolchain should be on the *PATH*.
-> 
+
+Initialize the repo first:
+
+`git submodule update --init`
+
 To build **bao** for cva6:
 
 `cd bao-hypervisor`
@@ -84,23 +91,34 @@ Copy the provided configs and cva6 platform to bao's directory:
 In the configs you want to use, in the *configs/xxxconfig/config.c* files, setup the absolute path for the
 vm images. For example:
 
-For the **cva6-baremetal** config:
+For the **culsans-baremetal** config:
 
-**VM_IMAGE(baremetal_image, path/to/bao-baremetal-guest/build/cva6/baremetal.bin);**
-
-or
-
-For the **cva6-linux** config:
-
-**VM_IMAGE(linux_image, /path/to/linux/lloader/linux-rv64-cva6.bin);**
-
-Next there is a example on how to compile bao with linux and baremetal config for cva6:
-
-`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=cva6 CONFIG=cva6-linux CONFIG_BUILTIN=y`
+**VM_IMAGE(baremetal_image, path/to/bao-baremetal-guest/build/culsans/baremetal.bin);**
 
 or
 
-`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=cva6 CONFIG=cva6-baremetal CONFIG_BUILTIN=y`
+For the **culsans-linux** config:
+
+**VM_IMAGE(linux_image, /path/to/linux/lloader/linux-rv64-culsans-dual.bin);**
+
+or
+
+For the **culsans-dual-vm** config:
+
+**VM_IMAGE(baremetal_image, path/to/bao-baremetal-guest/build/culsans/baremetal.bin);**
+**VM_IMAGE(linux_image, /path/to/linux/lloader/linux-rv64-culsans-one.bin);**
+
+Next there is a example on how to compile bao with linux or/and baremetal config for culsans:
+
+`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=culsans CONFIG=culsans-linux CONFIG_BUILTIN=y`
+
+or
+
+`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=culsans CONFIG=culsans-baremetal CONFIG_BUILTIN=y`
+
+or
+
+`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=culsans CONFIG=culsans-dual-vm CONFIG_BUILTIN=y`
 
 
 ## 1.4) OpenSBI
@@ -116,17 +134,18 @@ Examples:
 
 To build **opensbi**with **bao** and **baremetal application** for fpga run:
 
-`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/cva6/cva6-baremetal/bao.bin`
+`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/culsans/culsans-baremetal/bao.bin`
 
 To build **opensbi** with **bao** and **linux** for fpga run:
 
-`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/cva6/cva6-linux/bao.bin`
+`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/culsans/culsans-linux/bao.bin`
 
-To build **opensbi** with just **linux** for fpga run:
+To build **opensbi** with **bao** and **linux** and **baremetal application** for fpga run:
 
-`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../../cva6-sdk/install64/Image FW_FDT_PATH=../linux/cva6-ariane-minimal.dtb`
+`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/culsans/culsans-dual-vm/bao.bin`
 
-## 2) Generate Bitstream with CVA6
+
+## 2) Generate Bitstream with CVA6 Culsans
 
 > **_:notebook: Note:_** The following steps shall be executed with *RISCV* environment variable set to where your RISC-V installation is located.
 
@@ -170,6 +189,13 @@ then write the image with
    automatically.
    Once programming is finished (around 10s) reset will be immediately lifted
    and you should see the Application boot process being reported on the UART console.
+
+## 3) Running Benchmarks on Linux
+
+## 3.1) Mibench
+
+Execute the following script on the linux shell:
+`./mibench/runme.sh`
 
 ## Used tool versions
 
