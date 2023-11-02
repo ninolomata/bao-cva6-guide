@@ -63,12 +63,14 @@ Next, build the culsans device tree for **culsans-one** (linux with one core) an
 
 `cd ../linux`\
 `dtc culsans-one.dts > culsans-one.dtb`\
+`dtc culsans-one-with-uart.dts > culsans-one-uart.dts`\
 `dtc culsans-dual.dts > culsans-dual.dtb`
 
 And build the final image by concatening the minimal bootloader, linux and device tree binaries:
 
 `cd lloader`\
 `make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../culsans-one.dtb TARGET=linux-rv64-culsans-one`\
+`make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../culsans-one-uart.dtb TARGET=linux-rv64-culsans-one-uart`\
 `make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../culsans-dual.dtb TARGET=linux-rv64-culsans-dual`
 
 ## 1.3) Bao
@@ -103,6 +105,12 @@ For the **culsans-linux** config:
 
 or
 
+For the **culsans-linux-single** config:
+
+**VM_IMAGE(linux_image, /path/to/linux/lloader/linux-rv64-culsans-one-uart.bin);**
+
+or
+
 For the **culsans-dual-vm** config:
 
 **VM_IMAGE(baremetal_image, path/to/bao-baremetal-guest/build/culsans/baremetal.bin);**
@@ -111,6 +119,10 @@ For the **culsans-dual-vm** config:
 Next there is a example on how to compile bao with linux or/and baremetal config for culsans:
 
 `make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=culsans CONFIG=culsans-linux CONFIG_BUILTIN=y`
+
+or
+
+`make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=culsans CONFIG=culsans-linux-single CONFIG_BUILTIN=y`
 
 or
 
@@ -139,6 +151,10 @@ To build **opensbi**with **bao** and **baremetal application** for fpga run:
 To build **opensbi** with **bao** and **linux** for fpga run:
 
 `make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/culsans/culsans-linux/bao.bin`
+
+To build **opensbi** with **bao** and **linux-single** for fpga run:
+
+`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../bao-hypervisor/bin/culsans/culsans-linux-single/bao.bin`
 
 To build **opensbi** with **bao** and **linux** and **baremetal application** for fpga run:
 
