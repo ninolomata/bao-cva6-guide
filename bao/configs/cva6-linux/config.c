@@ -14,6 +14,7 @@ struct config config = {
                 .base_addr =0x80200000,
                 .load_addr = VM_IMAGE_OFFSET(linux_image),
                 .size = VM_IMAGE_SIZE(linux_image),
+                .inplace = true
             },
 
             .entry = 0x80200000,
@@ -69,7 +70,7 @@ struct config config = {
                 },
 
                 .arch = {
-                   .plic_base = 0xc000000,
+                   .irqc.plic.base = 0xc000000,
                 }
             },
         }
