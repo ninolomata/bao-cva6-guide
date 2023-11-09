@@ -44,7 +44,6 @@ Finally, initialize the repo and all the submodules by running:
 To build the bare-metal guest for the cva6:
 
 `cd bao-baremetal-guest`\
-`cp -r ../guest/platform/* ./src/platform`\
 `make CROSS_COMPILE=riscv64-unknown-elf- PLATFORM=cva6`
 
 ## 1.2) CVA6 SDK Linux
@@ -60,13 +59,13 @@ To build linux using the **cva6 sdk** run:
 Next, build the cva6 device tree:
 
 `cd ../linux`\
-`dtc cva6-ariane-minimal-bao.dts > cva6-ariane-minimal-bao.dtb`\
-`dtc cva6-ariane-minimal.dts > cva6-ariane-minimal.dtb`
+`dtc cva6-minimal-bao.dts > cva6-minimal-bao.dtb`\
+`dtc cva6-minimal.dts > cva6-minimal.dtb`
 
 And build the final image by concatening the minimal bootloader, linux and device tree binaries:
 
 `cd lloader`\
-`make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../cva6-ariane-minimal-bao.dtb TARGET=linux-rv64-cva6`
+`make CROSS_COMPILE=riscv64-unknown-elf- ARCH=rv64 IMAGE=../../cva6-sdk/install64/Image DTB=../cva6-minimal-bao.dtb TARGET=linux-rv64-cva6`
 
 ## 1.3) Bao
 
@@ -79,7 +78,6 @@ To build **bao** for cva6:
 Copy the provided configs and cva6 platform to bao's directory:
 
 `cp -r ../bao/configs/* ./configs`
-`cp -r ../bao/platform/* ./src/platform`
 
 In the configs you want to use, in the *configs/xxxconfig/config.c* files, setup the absolute path for the
 vm images. For example:
@@ -124,7 +122,7 @@ To build **opensbi** with **bao** and **linux** for fpga run:
 
 To build **opensbi** with just **linux** for fpga run:
 
-`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../../cva6-sdk/install64/Image FW_FDT_PATH=../linux/cva6-ariane-minimal.dtb`
+`make CROSS_COMPILE=riscv64-unknown-linux-gnu- PLATFORM=fpga/ariane FW_PAYLOAD=y FW_PAYLOAD_PATH=../../cva6-sdk/install64/Image FW_FDT_PATH=../linux/cva6-minimal.dtb`
 
 ## 2) Generate Bitstream with CVA6
 
